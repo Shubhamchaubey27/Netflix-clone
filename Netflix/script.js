@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Rotate the text along x, y, and z axes
             textMesh.rotation.x += 0.03;
-            textMesh.rotation.y += 0.08;
+            textMesh.rotation.y += 0.02;
             textMesh.rotation.z += 0.01;
 
             // Render the scene with the updated camera view
