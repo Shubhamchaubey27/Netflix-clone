@@ -1,0 +1,408 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+.main{
+    background-image: url(assets/images/bg.jpg);
+    height: 72vh;
+    background-position:center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    position: relative;
+    animation: borderChange 2s ease-in-out infinite;
+}
+.main .box{
+    height: 72vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.70;
+    top: 0;
+    position: absolute;
+}
+
+nav{
+    
+    max-width: 60vw;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    height: 60px;
+}
+nav img{
+    color: red;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+    animation: rotate 1s;
+    animation: fadeInOut 1.5s infinite;
+}
+
+nav img {
+    transition: transform 0.3s ease, filter 1s ease; /* Smooth transition for transform and filter */
+}
+
+nav img:hover {
+    transform: scale(2); /* Scale up on hover */
+    filter: hue-rotate(90deg); /* Change color using hue-rotate */
+    background-color: aliceblue;
+    border-radius: 50px;
+}
+
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+//@keyframes rotate{
+    100%{
+        rotate: 360deg;
+    }
+}
+
+nav button{
+    position: relative;
+    z-index: 10;
+}
+.hero{
+    height:88%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(225, 228, 230);
+    position: relative;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.hero> :nth-child(1){
+    font-weight: bolder;
+    font-size: 46px;
+}
+.hero> :nth-child(2){
+    font-weight: bolder;
+    font-size: 30px;;
+}
+.hero> :nth-child(3){
+    font-weight: bolder;
+    font-size: 22px;;
+}
+.sepration{
+   height: 5px;
+   background-color: rgb(69, 62, 62);
+   position: relative;
+   z-index: 20;
+   animation: borderPulse 1s infinite;
+}
+
+/* Keyframes for border animation */
+@keyframes borderPulse {
+    75% {
+        border-color: red;
+        box-shadow: 0 0 5px rgb(250, 247, 247);
+    }
+    25% {
+        border-color: blue;
+        box-shadow: 0 0 10px rgb(244, 244, 246);
+    }
+    50% {
+        border-color: rgb(62, 160, 212);
+        box-shadow: 0 0 10px rgb(88, 149, 210);
+    }
+    75% {
+        border-color: rgb(24, 178, 225);
+        box-shadow: 0 0 0px rgb(236, 236, 234);
+    }
+    100% {
+        border-color: rgb(11, 197, 230);
+        box-shadow: 0 0 0px white;
+    }
+}
+
+
+.btn{
+    transition: all 1s ease-out;
+    padding: 3px 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.btn:hover{
+    background-color: rgb(159, 154, 154);
+}
+.main input{
+    padding: 7px 101px 8px 14px;
+    font-size: 18px;
+    background-color: rgba(23,23, 23,0.6);
+    color: red;
+    transition: all 1s ease-out;
+    animation: borderChange 3s ease-in-out infinite;
+}
+.main input:hover{
+    background-color: rgba(244, 253, 253, 0.849);
+}
+.btn-red{
+    transition: all 1s ease-out;
+    background-color: rgb(160, 21, 21);
+    color: #ffffffd6;
+    padding: 12px 14px;
+    font-size: ;
+    border-radius: 5px;
+    border: 2px solid black;
+    animation: borderChange 3s ease-in-out infinite;
+}
+
+.btn-red:hover{
+    background-color: black;
+}
+.btn-red-sm{
+    transition: all 1s ease-out;
+    background-color: red;
+    color: #ffffffd6;
+    padding: 3px;
+    border-radius: 2px;
+    border: 2px solid black;
+    animation: borderChange 3s ease-in-out infinite;
+}
+
+@keyframes borderChange {
+    0% {
+        border-bottom: 3px solid transparent;
+        border-right: 3px solid transparent;
+    }
+    50% {
+        border-bottom: 3px solid red;
+        border-right: 3px solid transparent;
+    }
+    100% {
+        border-bottom: 3px solid red;
+        border-right: 3px solid red;
+    }
+}
+
+
+
+.btn-red-sm:hover{
+    background-color: black;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    align-items: center;
+    color: aliceblue;
+
+}
+.secImg img{
+    max-width: 30vw;
+    position: relative;
+    z-index: 10;
+    
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.secImg{
+    position: relative;
+    animation: bounce 2s infinite;
+}
+.secImg video{
+    position: absolute;
+    top: 71px;
+    right: 62px;
+    width: 325px;
+    border: 2px solid red;
+}
+
+.input-text{
+   
+}
+.input-text h1{
+   color: red;
+  font-size: 43px;
+  text-align: center;
+}
+.input-text p{
+    color: rgb(240, 239, 239);
+    font-size: 21px;
+}
+.input-text2 h1{
+    color: rgb(239, 87, 11);
+   font-size: 42px;
+}
+.input-text2 p{
+    color: rgb(240, 239, 239);
+    font-size: 25px;
+}
+div .image2{
+    width: 49px;
+    height: 64px;
+    border: 2px solid rgb(15, 13, 13);
+   margin: -10px;
+    left: 119px;
+    bottom: 39px
+}
+.secImg3{
+    position: relative;
+}
+.secImg3 img{
+    max-width: 30vw;
+    position: relative;
+    z-index: 10;
+}
+.secImg3 video{
+    position: absolute;
+    top: 38px;
+    right: 83px;
+    width: 258px;
+    
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.input-text3 h1{
+    color: red;
+    font-size: 40px;
+}
+.input-text3 p{
+    font-size: 22px;
+}
+.input-text4 h1{
+    color: red;
+    font-size: 34px;
+}
+.input-text4 p{
+    font-size: 20px;
+}
+.faq h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+.faq{
+    padding: 30px;
+
+}
+.faqbox:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover color */
+}
+
+.faqbox {
+    transition: all 1s ease-out;
+    font-size: 22px;
+    display: flex;
+    padding: 13px;
+    margin-top: 22px;
+    background-color: rgba(86, 84, 84, 0.602); /* Default color */
+    color: white;
+    max-width: 60vw;
+    margin: 14px auto;
+    justify-content: space-between;
+    cursor: pointer;
+
+    border: 3px solid transparent;
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(233, 179, 179), blue, rgb(133, 191, 212));
+    background-size: 200% 200%;
+    animation: borderMove 1s linear infinite;
+    color: white;
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 10%;
+    }
+}
+
+.faqbox img{
+    background-color: white;
+  border: 2px solid red;
+  border-radius: 12px;
+}
+
+.footer-item{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+    padding: 55px;
+    row-gap: 27px;
+    
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+   margin: 50px;
+}
+.footer-item a {
+    color: rgba(255, 255, 255, 0.616);
+    transition: all 1s ease-out;
+}
+.footer-item a:hover{
+    color:rgb(248, 6, 6);
+}
+
+.circle{
+    margin: 29px;
+    height: 200px;
+    width: 200px;
+    background: conic-gradient(rgb(188, 215, 222),indigo,orange,rgb(232, 208, 232),rgb(143, 124, 143),);
+    border-radius: 121px;
+    margin-left: 210px;
+    animation: anime 0.05s linear infinite;
+    border: 2px solid rgb(29, 25, 25);
+    background: linear-gradient(rgb(241, 237, 237), rgb(144, 144, 229),white, purple);
+}
+
+@keyframes anime{
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    nav{
+        max-width: 150vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 310px;
+    }
